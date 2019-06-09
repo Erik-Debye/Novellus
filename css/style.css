@@ -1,0 +1,32 @@
+/* Main colors
+
+
+
+*/
+
+/*Removes all pre-defined values for CSS classes (i.e. padding around H# elements*/
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Sets defined values for fonts. Located here as font-properties are inherited*/
+body{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px; /*Will need to be made responsive*/
+    line-height: 1.7;
+    color: #777;
+    padding: 15px;
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,rgba(246, 115, 126, 0.5), rgba(255, 195, 112, 0.5)),url(../img/HEADER-min.jpg);
+    background-size: cover; /*Covers width of Viewport*/
+    background-position: top;
+
+    clip-path: polygon(0 0, 45% 0 , 75% 100%, 0 100%); /*creates the cut polygon in the header.*/
+
+}
