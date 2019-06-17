@@ -13,20 +13,87 @@
 
 /*Sets defined values for fonts. Located here as font-properties are inherited*/
 body{
-    font-family: sans-serif;
-    font-weight: 400;
+    font-family: 'Aleo', serif;
+    font-weight: 300;
     font-size: 16px; /*Will need to be made responsive*/
     line-height: 1.7;
-    color: #777;
-    padding: 15px;
+    color: aquamarine;
+    padding: 10px;
 }
 
 .header{
     height: 95vh;
-    background-image: linear-gradient(to right bottom,rgba(246, 115, 126, 0.5), rgba(255, 195, 112, 0.5)),url(../img/HEADER-min.jpg);
+    background-image: linear-gradient(to right bottom,rgba(255, 217, 155, 0.6), rgba(25, 84, 123, 0.6)),url(../img/HEADER-min.jpg);
     background-size: cover; /*Covers width of Viewport*/
     background-position: top;
+    position: relative;
 
-    clip-path: polygon(0 0, 45% 0 , 75% 100%, 0 100%); /*creates the cut polygon in the header.*/
+    clip-path: polygon(0 0, 45% 0 , 75% 100vh, 0 100%); /*creates the cut polygon in the header.*/
 
+}
+
+.logo-box{
+    position: absolute;
+    top:20px;
+    left: 20px;
+}
+
+.logo{
+    height: 50px;
+}
+
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%,-50%);
+}
+
+.heading-primary{
+    color: #000;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    letter-spacing: 16px;
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: -20px;
+}
+
+.heading-primary-sub{
+    display: inline-block;
+    font-size: 21px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+
+.divider{
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:10px;
+    border-radius: 7px;
+    font-weight: 400;
+
+}
+
+.btn-red{
+    background-color: #fa8231;
+    font-weight: 400;
+    color: #fff;
+}
+
+.btn-yellow{
+    background-color: #3e91c5;
+    font-weight: 400;
+    color: #fff;
 }
