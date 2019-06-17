@@ -1,153 +1,127 @@
-/* Main colors
-
-
-
-*/
-
 /*Removes all pre-defined values for CSS classes (i.e. padding around H# elements*/
 *,
 *::after,
-*::before{
-    margin : 0;
-    padding: 0;
-    box-sizing: inherit; 
-    /*sets every element to to inherit the box-size property. When the body of the page is set to a specific
-    box-size property, each element then inherits that.*/
-}
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /*sets every element to to inherit the box-size property. When the body of the page is set to a specific
+    box-size property, each element then inherits that.*/ }
 
-html{
-    font-size: 62.5%; 
-    /*
+html {
+  font-size: 62.5%;
+  /*
     By settting the root font size to 10px, it allows for easy px -> rem conversion.
     I.E. font-size: 16px === 1.6rem
     It is bad practice to set the font to a definite px #, so if we assume the default browser size is 16px,
     we can set our font size to 10px/16px, or 62.5%. This allows users to easily use zoom, etc. 
-    */
-}
+    */ }
 
 /*Sets defined values for fonts. Located here as font-properties are inherited*/
-body{
-    font-family: 'Aleo', serif;
-    font-weight: 300;
-    line-height: 1.7;
-    color: aquamarine;
-    padding: 1rem;
-    box-sizing: border-box;
-}
+body {
+  font-family: 'Aleo', serif;
+  font-weight: 300;
+  line-height: 1.7;
+  color: aquamarine;
+  padding: 1rem;
+  box-sizing: border-box; }
 
-.header{
-    height: 95vh;
-    background-image: linear-gradient(to right bottom,rgba(255, 217, 155, 0.6), rgba(25, 84, 123, 0.6)),url(../img/HEADER-min.jpg);
-    background-size: cover; /*Covers width of Viewport*/
-    background-position: top;
-    position: relative;
-    border-radius: .4rem;
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(255, 217, 155, 0.6), rgba(25, 84, 123, 0.6)), url(../img/HEADER-min.jpg);
+  background-size: cover;
+  /*Covers width of Viewport*/
+  background-position: top;
+  position: relative;
+  border-radius: .4rem;
+  clip-path: polygon(0 0, 35% 0, 75% 100vh, 0 100%);
+  /*creates the cut polygon in the header.*/ }
 
-    clip-path: polygon(0 0, 35% 0 , 75% 100vh, 0 100%); /*creates the cut polygon in the header.*/
+.header__logo-box {
+  position: absolute;
+  top: 2rem;
+  left: 2rem; }
 
-}
+.header__logo {
+  height: 5rem; }
 
-.header__logo-box{
-    position: absolute;
-    top:2rem;
-    left: 2rem;
-}
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -50%); }
 
-.header__logo{
-    height: 5rem;
-}
+.heading-primary {
+  color: #000;
+  text-transform: uppercase; }
 
-.header__text-box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-10%,-50%);
-}
+.heading-primary--main {
+  display: block;
+  letter-spacing: 1.6rem;
+  font-size: 9rem;
+  font-weight: 400;
+  margin-bottom: -2rem; }
 
-.heading-primary{
-    color: #000;
-    text-transform: uppercase;
-}
+.heading-primary--sub {
+  display: inline-block;
+  font-size: 2.5rem;
+  letter-spacing: .1rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem; }
 
-.heading-primary--main{
-    display: block;
-    letter-spacing: 1.6rem;
-    font-size: 9rem;
-    font-weight: 400;
-    margin-bottom: -2rem;
-}
-
-.heading-primary--sub{
-    display: inline-block;
-    font-size: 2.5rem;
-    letter-spacing: .1rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-}
-
-.divider{
-    width:2.5rem;
-    height:auto;
-    display:inline-block;
-}
+.divider {
+  width: 2.5rem;
+  height: auto;
+  display: inline-block; }
 
 .btn:link,
-.btn:visited{
-    letter-spacing: .1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 1.6rem;
-    border-radius: .8rem;
-    padding: .5rem 1rem;
-    font-weight: 400;
-    display: inline-block;
-    transition: all .2s;
-    position: relative;
-}
+.btn:visited {
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  border-radius: .8rem;
+  padding: .5rem 1rem;
+  font-weight: 400;
+  display: inline-block;
+  transition: all .2s;
+  position: relative; }
 
-.btn:hover{
-    transform: translateY(-.4rem);
-    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .4);
-}
+.btn:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.4); }
 
-.btn:active{
-    transform: translateY(-.3rem);
-    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .4);
-}
+.btn:active {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.4); }
 
-.btn--orange{
-    background-color: #fa8231;
-    color: #fff;
-}
+.btn--orange {
+  background-color: #fa8231;
+  color: #fff; }
 
-.btn--blue{
-    background-color: #3e91c5;
-    color: #fff;
-}
+.btn--blue {
+  background-color: #3e91c5;
+  color: #fff; }
 
-.btn::after{
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: .8rem;
-    position: absolute;
-    top:0;
-    left:0;
-    transition: all .8s;
-}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: .8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .8s; }
 
-.btn--orange::after{
-    background-color: #fa8231;
-    z-index: -1;
-}
+.btn--orange::after {
+  background-color: #fa8231;
+  z-index: -1; }
 
-.btn--blue::after{
-    background-color: #3e91c5;
-    z-index: -1;
-}
+.btn--blue::after {
+  background-color: #3e91c5;
+  z-index: -1; }
 
-.btn:hover::after{
-    transform: scale(1) scale(1.1);
-    opacity: 0;
-}
+.btn:hover::after {
+  transform: scale(1) scale(1.1);
+  opacity: 0; }

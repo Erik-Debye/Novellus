@@ -1,0 +1,22 @@
+{
+  "name": "novellus",
+  "version": "1.0.0",
+  "description": "A project incoporating JS, CSS, SASS, HTML that allows users to look up and lease books.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erik-Debye/Novellus.git"
+  },
+  "author": "Erik Debye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erik-Debye/Novellus/issues"
+  },
+  "homepage": "https://github.com/Erik-Debye/Novellus#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
