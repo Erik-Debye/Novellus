@@ -1,3 +1,6 @@
+/*imports*/
+/*Colors*/
+/*Allows for easy changing of the CSS grid's max width, vertical margin. and horizontal margin*/
 /*Removes all pre-defined values for CSS classes (i.e. padding around H# elements*/
 *,
 *::after,
@@ -19,38 +22,15 @@ html {
 
 /*Sets defined values for fonts. Located here as font-properties are inherited*/
 body {
-  box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*Sets defined values for fonts. Located here as font-properties are inherited*/
+body {
   color: #777;
   font-family: 'Aleo', serif;
   font-weight: 300;
   line-height: 1.7;
   padding: 1rem; }
-
-.header {
-  background-color: #fffafa;
-  background-image: linear-gradient(to right bottom, rgba(255, 217, 155, 0.6), rgba(25, 84, 123, 0.6)), url(../img/HEADER-min.jpg);
-  background-size: cover;
-  /*Covers width of Viewport*/
-  background-position: top;
-  border-radius: .4rem;
-  height: 95vh;
-  position: relative;
-  /*From here forward all newer CSS properties requiring browser support additions will be set serperate from
-    alphabetized CSS properties for increased reabability and troubleshooting*/
-  clip-path: polygon(0 0, 35% 0, 75% 100vh, 0 100%);
-  /*creates the cut polygon in the header.*/ }
-  .header__logo-box {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    /*Top and Left CSS properties should be changed to SCSS mixen for ease of use.*/ }
-  .header__logo {
-    height: 5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-10%, -50%); }
 
 .heading-primary {
   color: #000;
@@ -122,3 +102,55 @@ body {
   .btn--orange::after {
     background-color: #fa8231;
     z-index: -1; }
+
+.header {
+  background-color: #fffafa;
+  background-image: linear-gradient(to right bottom, rgba(255, 217, 155, 0.6), rgba(25, 84, 123, 0.6)), url(../img/HEADER-min.jpg);
+  background-size: cover;
+  /*Covers width of Viewport*/
+  background-position: top;
+  border-radius: .4rem;
+  height: 95vh;
+  position: relative;
+  /*From here forward all newer CSS properties requiring browser support additions will be set serperate from
+    alphabetized CSS properties for increased reabability and troubleshooting*/
+  clip-path: polygon(0 0, 35% 0, 75% 100vh, 0 100%);
+  /*creates the cut polygon in the header.*/ }
+  .header__logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    /*Top and Left CSS properties should be changed to SCSS mixen for ease of use.*/ }
+  .header__logo {
+    height: 5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%); }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }

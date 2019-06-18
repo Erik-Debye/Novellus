@@ -1,0 +1,25 @@
+/*Removes all pre-defined values for CSS classes (i.e. padding around H# elements*/
+*,
+*::after,
+*::before{
+    box-sizing: inherit; 
+    /*sets every element to to inherit the box-size property. When the body of the page is set to a specific
+    box-size property, each element then inherits that.*/
+    margin : 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%; 
+    /*
+    By settting the root font size to 10px, it allows for easy px -> rem conversion.
+    I.E. font-size: 16px === 1.6rem
+    It is bad practice to set the font to a definite px #, so if we assume the default browser size is 16px,
+    we can set our font size to 10px/16px, or 62.5%. This allows users to easily use zoom, etc. 
+    */
+}
+
+/*Sets defined values for fonts. Located here as font-properties are inherited*/
+body{
+    box-sizing: border-box;
+}

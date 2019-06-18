@@ -1,0 +1,29 @@
+/*Sets defined values for fonts. Located here as font-properties are inherited*/
+body{
+    color: $color-grey;
+    font-family: 'Aleo', serif;
+    font-weight: 300;
+    line-height: 1.7;
+    padding: 1rem;
+}
+
+.heading-primary{
+    color: $color-black;
+    text-transform: uppercase;
+
+    &--main{
+        display: block;
+        font-size: 9rem;
+        font-weight: 400;
+        letter-spacing: 1.6rem;
+        margin-bottom: -2rem;
+    }
+
+    &--sub{
+        display: inline-block;
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: .1rem;
+        margin-bottom: 1.5rem;
+    }
+}
