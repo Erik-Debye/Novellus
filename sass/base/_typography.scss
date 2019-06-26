@@ -27,3 +27,12 @@ body{
         margin-bottom: 1.5rem;
     }
 }
+
+.heading-secondary{
+    background-image: linear-gradient(to right,#eb3b5a ,#fc5c65);
+    color: transparent;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    -webkit-background-clip: text;
+}

@@ -18,7 +18,7 @@
         box-shadow: 0 .5rem 2rem rgba($color-black, .4);
         transform: translateY(-.4rem);
         &::after{
-            transform: scale(1) scale(1.1);
+            transform: scale(1.1) scale(1.2);
             opacity: 0;
         }
     }
@@ -37,15 +37,15 @@
         position: absolute;
         top:0;
         left:0; /*Another instance of top & left to be changed in the future*/
-        transition: all .9s;
+        transition: all .5s;
     }
 
     &--blue{
-        background-color: #3e91c5;
+        background-color: #3393ce;
         color: $color-white;
 
         &::after{
-            background-color: #2b94d4;
+            background-color: #3393ce;
             z-index: -1;
         }
     }
